@@ -1,3 +1,9 @@
+kactivities-kf5 (5.86.0.1-deepin1) unstable; urgency=medium
+
+  * Fix build failure on deepin-riscv 
+
+ -- Gui-Yue <yuemeng.gui@gmail.com>  Thu, 08 Dec 2022 10:28:02 +0000
+
 kactivities-kf5 (5.86.0-1) unstable; urgency=medium
 
   [ Norbert Preining ]
