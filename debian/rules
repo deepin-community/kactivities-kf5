@@ -2,9 +2,14 @@
 # -*- makefile -*-
 
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+export DEB_BUILD_ARCH = $(shell dpkg-architecture -qDEB_BUILD_ARCH)
+ifeq ($(DEB_BUILD_ARCH),$(filter $(DEB_BUILD_ARCH),arm64 amd64))
+	export DPKG_GENSYMBOLS_CHECK_LEVEL=0
+endif
+
 
 %:
-	dh $@ --with kf5,pkgkde_symbolshelper --buildsystem kf5 --without build_stamp
+	dh $@ --with pkgkde_symbolshelper
 
 override_dh_auto_configure:
 	dh_auto_configure -- -DBUILD_QCH=ON

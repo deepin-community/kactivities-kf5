@@ -15,10 +15,9 @@
 #include <QSqlTableModel>
 
 // KDE
-#include <kconfiggroup.h>
+#include <KConfigGroup>
 
 // STL and Boost
-#include <boost/container/flat_set.hpp>
 #include <memory>
 
 // Local
